@@ -8,7 +8,7 @@ data <- data.frame(
     id = seq.int(nrow(original_data)),
     location_general = sapply(original_data$location, function(loc) strsplit(loc, split = " -- ")[[1]][1]),
     gain = as.numeric(original_data$gain),
-    highpoint = as.numeric(data$highpoint),
+    highpoint = as.numeric(original_data$highpoint),
     rating = as.numeric(original_data$rating),
     trip = sapply(original_data$length, function(type) strsplit(type, split = ", ")[[1]][2]),
     length_total = sapply(original_data$length, function(dist_full) {

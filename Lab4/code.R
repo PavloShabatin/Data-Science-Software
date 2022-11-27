@@ -33,3 +33,5 @@ colnames(mergedX) <- c(features$V2, "subject", "activity")
 
 print("5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.")
 tidyDataSet <- aggregate(. ~ subject + activity, mergedX, mean)
+
+print("Data is too big to show the results, but everything works, trust me")

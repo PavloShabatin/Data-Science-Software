@@ -9,10 +9,13 @@ pollutantmean <- function(dir, pol, ids) {
   return (mean(data[,pol]))
 }
 
+print("Pollutantmean sulfate from 1 to 10")
 print(pollutantmean("specdata", "sulfate", 1:10))
 
+print("Pollutantmean nitrate from 70 to 72")
 print(pollutantmean("specdata", "nitrate", 70:72))
 
+print("Pollutantmean nitrate 23")
 print(pollutantmean("specdata", "nitrate", 23))
 
 complete <- function(dir, ids) {
@@ -26,10 +29,13 @@ complete <- function(dir, ids) {
   return (filteredData)
 }
 
+print("Complete for 1")
 print(complete("specdata", 1))
 
+print("Complete for c(2, 4, 8, 10, 12)")
 print(complete("specdata", c(2, 4, 8, 10, 12)))
 
+print("Complete for 30:25")
 print(complete("specdata", 30:25))
 
 corr <- function(dir, threshold) {
@@ -50,14 +56,17 @@ corr <- function(dir, threshold) {
   return (filteredData)
 }
 
+print("Corr 150")
 cr <- corr("specdata", 150)
 print(head(cr))
 print(summary(cr))
 
+print("Corr 400")
 cr <- corr("specdata", 400)
 print(head(cr))
 print(summary(cr))
 
+print("Corr 5000")
 cr <- corr("specdata", 5000)
 print(summary(cr))
 print(length(cr))
